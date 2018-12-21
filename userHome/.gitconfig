@@ -1,0 +1,37 @@
+[user]
+	name = MResh
+	email = mresh@emprisecorporation.com
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    mylg = !"git lg1"
+	tree = log --all --graph --decorate --oneline --simplify-by-decoration
+	branch-tree = !cd "$(git rev-parse --git-dir)/refs/heads" && tree
+	adog = git log --all --decorate --oneline --graph
+	
+	forkdiff = !bash -c 'git diff $(git merge-base "$1" "$2") "$2" "${@: 3}" ' -
+	showFilesChanged = diff --summary FETCH_HEAD
+	showFilesBranchChanged = diff 'master...' -- name-only
+
+	showme = "!f() { git diff --name-only \"$1^\"; }; f"
+	
+	untrack = rm --cache --
+	who = shortlog -s --
+	
+	
+	
+	
+[core]
+	editor='C:/Program Files (x86)/Notepad++/notepad++.exe'
+	autocrlf = false
+	excludesfile = C:/Users/Mresh/.gitignore_global
+	
+[gui]
+	tabsize = 4

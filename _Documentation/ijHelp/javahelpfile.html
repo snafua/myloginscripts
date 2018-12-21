@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+    <title>Help and Hotlinks for IntellJ</title>
+    <style type="text/css">
+        body, th, td, p, div, span, a, ul, ul li, ol, ol li, ol li b, dl, h1, h2, h3, h4, h5, h6, li {
+            font-family: geneva, helvetica, arial, "lucida sans", sans-serif;
+            font-size: 10pt
+        }
+
+        h1 {
+            font-size: 18pt
+        }
+
+        h2 {
+            font-size: 14pt
+        }
+
+        h3 {
+            font-size: 12pt
+        }
+
+        code, kbd, tt, pre {
+            font-family: monaco, courier, "courier new";
+            font-size: 10pt;
+            color: #666
+        }
+
+        li {
+            padding-bottom: 8px
+        }
+
+        p.copy, p.copy a {
+            font-family: geneva, helvetica, arial, "lucida sans", sans-serif;
+            font-size: 8pt
+        }
+
+        p.copy {
+            text-align: center
+        }
+
+        TR.tableRow {
+            vertical-align: top;
+            padding-right: 4px;
+            padding-bottom: 2px;
+        }
+
+        TD.tableCol {
+            vertical-align: top;
+            padding-right: 4px;
+            padding-bottom: 2px;
+        }
+
+        .category {
+            background: #11E816;
+            text_align: center;
+        }
+
+        .tableCol {
+            va-align: middle;
+            background: #11E816;
+            text_align: center;
+        }
+
+        .descriptionCol {
+            va-align: left;
+            text_align: left;
+        }
+    </style>
+
+    <script language="JavaScript" src="./tablehelpjs.js" type="text/javascript"></script>
+    <!--<script language="JavaScript" src="./myHelp.js" type="text/javascript"></script>-->
+    <script>
+        //var filename=location.search;
+        //alert(loadjs());
+        //alert("p="+getUrlParms("filename"));
+        loadjs(getUrlParms("filename"));
+    </script>
+    <script type="application/javascript">
+        var filename = getParam('filename');
+        importJS(filename);
+       // alert(filename);
+    </script>
+    <!--script language="JavaScript" src="tablehelp.js" type="text/javascript"></script-->
+
+
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"
+      link="#594fbf" vlink="#1005fb" alink="#333366" marginwidth="10"/>
+
+
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+    <tbody>
+    <tr>
+        <td valign="top" align="CENTER" bgcolor="#587993"><font
+                color="#fffff9" size="-1"><b>Java Application Server</b></font>&nbsp;
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!---- Don't modify anything above this line, except for the title tag -------->
+<!--- Do not modify the rest of the document --><br>
+<h1>Java Help Contexts</h1>
+The following sample applications are installed by default:<br>
+<!--
+<script type="text/javascript">
+createArray("http://www.google.com","Google search","Google Search");
+</script>
+-->
+<script>//createTable(2,c);</script>
+<table width="100%" border="1" cellspacing="0" cellpadding="0" style="vertical-align: top; margin-top: 5px;">
+    <tr>
+        <th nowrap class="tableCol" width="20%" height="5px">
+            <ul>Link Reference</ul>
+        </th>
+        <th nowrap class="tableCol" width="20%" height="5px">
+            <ul>Link Location</ul>
+        </th>
+        <th nowrap class="tableCol" height="5px">
+            <ul>Description of link and how to use.</ul>
+        </th>
+    </tr>
+
+    <script type="text/javascript">writeHelpData();</script>
+    <tr>
+        <td>
+            <ul>
+                <li><a href="./quickstart/docs/index.html">Quickstart Sample</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>Start here to get up and running quickly on the Application Server. The explains how to perform basic
+                tasks such as starting the server, accessing the Admin
+                Console, and deploying a sample application.
+            </ul>
+        </td>
+    </tr>
+
+</table>
+<SCRIPT Language="JScript">
+    function runcmd(command) {
+        File = "notepadplus.bat" + command;
+        WSH = new ActiveXObject("WScript.Shell");
+        WSH.run(File);
+    }
+</SCRIPT>
+<A href="#" onClick="runcmd(); return false;">Run CMD.exe</A>
+
+<p>Edit Java Help files access them by clicking <a href="./">here</a>.
+    Edit Java Help files access them by clicking <a href="./javahelp.js">here</a>.
+</p>
+
+
+<p>
+    You can also download <a
+        href="http://java.sun.com/j2ee/reference/codesamples/index.html">
+    J2EE 1.4 Samples</a> that demonstrate features of the J2EE 1.4 platform.&nbsp;
+    The download includes detailed instructions to build and run the sample
+    applications. Expand the zip file in the directory
+    <code>&lt;appserver-install-root&gt;/samples</code> to create the
+    directory
+    <code>&lt;appserver-install-root&gt;/samples/j2ee14</code>.<br>
+</p>
+<p>Check if you already installed <a href="j2ee14/index.html">J2EE 1.4
+    Samples</a>.<br>
+</p>
+<p>Once the J2EE 1.4 Samples are downloaded and installed, you may
+    access them by clicking <a href="j2ee14/index.html">here</a>.
+</p>
+<hr noshade="noshade" size="1"><!-- start copyright -->
+<p class="copy"> Copyright &copy; 2006 <a href="http://sun.com">Sun
+    Microsystems, Inc.</a>
+    All rights reserved. </p>
+<!--  end copyright  -->
+</body>
+</html>
