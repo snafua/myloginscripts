@@ -54,12 +54,20 @@ alias gsts='git stash save'
 alias gstpu='git stash push'
 alias gddiff='git diff upstream/master..master  --name-status'
 alias gdstatus='git diff upstream/master..master  --shortstat'
+alias gsfc='gshowfiles'
+
 # ----------------------
 # Git Functions
 # ----------------------
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; };
 function glfc() { git log --all --grep="$1" --oneline; };
+function gshowfiles() {
+if [[ -n $1 ]]; then
+	git log --oneline --name-only "$1".. |sort |uniq ;
+else echo "error please pass in branch name";
+fi;
+};
 function ahead_behind {
 curr_branch=$(git rev-parse --abbrev-ref HEAD);
 curr_remote=$(git config branch.$curr_branch.remote);
